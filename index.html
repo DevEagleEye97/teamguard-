@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrustGuard — Intelligent Supply Chain & Data Security Platform</title>
+    <meta name="description" content="Enterprise supply chain resilience, database security, and threat intelligence platform for industrial manufacturers and distributors." />
+    <meta property="og:title" content="TrustGuard — Intelligent Supply Chain & Data Security Platform" />
+    <meta property="og:description" content="Enterprise supply chain resilience, database security, and threat intelligence platform for industrial manufacturers and distributors." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        try {
+          var theme = localStorage.getItem('trustguard_theme') || 'dark';
+          if (theme === 'system') {
+            theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-[#101418] text-[#F4F0E7] dark:bg-[#101418] dark:text-[#F4F0E7] antialiased selection:bg-[#C6A85E]/30 selection:text-[#F4F0E7]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

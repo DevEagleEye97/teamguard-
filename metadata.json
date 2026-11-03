@@ -1,0 +1,6 @@
+{
+  "name": "TrustGuard - Supply Chain Resilience Platform",
+  "description": "AI-powered supply chain resilience platform for Indian mid-market manufacturers and distributors, featuring real-time control tower, disruption intelligence, supplier risk modeling, and Gemini-driven mitigation playbooks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

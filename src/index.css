@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #F8FAFC;
+    --bg-secondary: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --border-subtle: #E2E8F0;
+    --text-primary: #0F172A;
+    --text-secondary: #64748B;
+    --accent-gold: #B88E38;
+    --accent-gold-bg: rgba(184, 142, 56, 0.12);
+  }
+
+  .dark {
+    --bg-main: #101418;
+    --bg-secondary: #151B20;
+    --bg-card: #1A2228;
+    --border-subtle: #303940;
+    --text-primary: #F4F0E7;
+    --text-secondary: #A5ADB5;
+    --accent-gold: #C6A85E;
+    --accent-gold-bg: rgba(198, 168, 94, 0.15);
+  }
+
+  body {
+    font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  code, kbd, samp, pre, .font-mono {
+    font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  }
+}
+
+/* Typography scale utility classes according to spec */
+.type-page-title {
+  font-size: clamp(1.75rem, 2.25vw, 2.25rem); /* 28-36px */
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.type-section-title {
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem); /* 20-24px */
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.type-card-title {
+  font-size: 1rem; /* 16px */
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.type-body {
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.5;
+}
+
+.type-label {
+  font-size: 0.78125rem; /* 12.5px */
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.type-meta {
+  font-size: 0.71875rem; /* 11.5px */
+  line-height: 1.4;
+}
+
+/* Custom scrollbars that adapt to dark / light theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #303940;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #46535D;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Custom themes classes */
+.theme-bg-main {
+  background-color: var(--bg-main);
+}
+
+.theme-bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.theme-bg-card {
+  background-color: var(--bg-card);
+}
+
+.theme-border {
+  border-color: var(--border-subtle);
+}
+
+.theme-text-primary {
+  color: var(--text-primary);
+}
+
+.theme-text-secondary {
+  color: var(--text-secondary);
+}
+
+.theme-accent-gold {
+  color: var(--accent-gold);
+}
+
+.theme-accent-gold-bg {
+  background-color: var(--accent-gold-bg);
+}
